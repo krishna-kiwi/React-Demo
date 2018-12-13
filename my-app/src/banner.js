@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export default class Banner extends React.Component {
   render() {
     return (
@@ -24,7 +23,7 @@ class Header extends React.Component{
   }
 }
 
-class Content extends React.Component {
+export class Content extends React.Component {
   render() {
     return (
       <div>
@@ -34,6 +33,10 @@ class Content extends React.Component {
     );
   }
 }
+
+
+
+
 
 
 
