@@ -1,13 +1,12 @@
 import React from 'react';
-import Person from './person.js';
-
+import ProjectList from './project.js';
 
 class App extends React.Component {
   render() {
   	
     return (
       <div>
-        <Person/>
+        <ProjectList/>
       </div>
     );
   }
