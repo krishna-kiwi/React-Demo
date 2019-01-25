@@ -1,40 +1,39 @@
 import React from 'react';
 import './project.css';
-export default class ProjectList extends React.Component{
+export default class ProjectList extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            title: 'Project Description',
+            project: [{
 
-	constructor(props){
-		super();
-		this.state={
-			title:'Project Description',
-			project:[
-				{	
+                    projectName: 'Mugatunes',
+                    projectCost: '10K',
+                    releaseDate: '12-02-2019',
+                    Technology: 'ReactJs'
+                },
+                {
+                    projectName: 'Techadox',
+                    projectCost: '20K',
+                    releaseDate: '28-12-2018',
+                    Technology: 'laravel'
+                },
+                {
+                    projectName: 'Reti',
+                    projectCost: '30k',
+                    releaseDate: '28-11-2018',
+                    Technology: 'phyton'
+                }
+            ]
 
-					projectName:'Mugatunes',
-					projectCost:'10K',
-					releaseDate:'12-02-2019',
-					Technology:'ReactJs'
-				},
-				{
-					projectName:'Techadox',
-					projectCost:'20K',
-					releaseDate:'28-12-2018',
-					Technology:'laravel'
-				},
-				{
-					projectName:'Reti',
-					projectCost:'30k',
-					releaseDate:'28-11-2018',
-					Technology:'phyton'
-				}
-			]
 
-			
-		}
-	}
+        }
+    }
 
-	render(){
-		return(
-			<section>
+    render() {
+        return (
+            <section>
+			{this.props.name}
 				<h1>{this.state.title} </h1>
 				<table>
 					<thead>
@@ -55,28 +54,21 @@ export default class ProjectList extends React.Component{
 					</tbody>
 				</table>
 			</section>
-		)
-	}
+        )
+    }
 }
 
-export class ProjectDesc extends React.Component{
+export class ProjectDesc extends React.Component {
 
-	render(){
+    render() {
 
-		return(
-
-			<tr>
+        return (
+            <tr>
 				<td>{this.props.details.projectName}</td>
 				<td>{this.props.details.projectCost}</td>
 				<td>{this.props.details.releaseDate}</td>
-				<td>{this.props.details.Framework}</td>
+				<td>{this.props.details.Technology}</td>
 			</tr>
-		)
-	}
+        )
+    }
 }
-
-
-
-
-
-

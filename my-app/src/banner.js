@@ -4,14 +4,13 @@ export default class Banner extends React.Component {
   render() {
     return (
       <div>
-        <Header/>
-        <Content/>
+        my banner
       </div>
     );
   }
 }
 
-class Header extends React.Component{
+export class Header extends React.Component{
   render() {
     var myStyle={
       fontSize:20,
@@ -27,7 +26,7 @@ export class Content extends React.Component {
   render() {
     return (
       <div>
-          <h2>Content</h2>
+          <h2>My Content component</h2>
           <p>The content text!!!</p>
       </div>
     );
